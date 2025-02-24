@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../img/background.jpg);
+    background-size: cover; /* A kép teljes mértékben kitölti a rendelkezésre álló teret */
+    background-position: center center; /* A kép középre igazítása */
+    background-attachment: fixed; /* A háttér rögzítése, hogy ne mozduljon el a görgetéskor */
+    background-repeat: no-repeat;
+}
+h1 {
+    color: red;
+    font-size: 70px;
+}
+
+/* Navigációs sáv */
+.navbar {
+    background-color: #333;
+    width: 100%;
+    text-align: center; /* Középre igazítás */
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Középre igazítás a vízszintes menü elemeknek */
+}
+
+.navbar ul li {
+    padding: 10px 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    font-size: 130%;
+}
+
+/* Tartalom terület */
+.container {
+    padding-top: 60px; /* A navigációs menü magassága */
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Reszponzív média lekérdezések */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+form {
+    padding-top: 50px;
+    font-weight: bolder;
+}
+
+.image-container {
+    display: flex;               /* Flexbox konténer */
+    justify-content: space-around; /* A képek egyenletes elosztása */
+    gap: 10px;                   /* Távolság a képek között */
+}
+
+.image-container img {
+    width: 30%;                  /* A képek szélessége */
+    height: auto;                /* A képek magasságának automatikus beállítása a szélesség alapján */
+    object-fit: cover;           /* A képek nem torzulnak, hanem kitöltik a rendelkezésre álló teret */
+}
+table {
+    background-color: #575757;
+    color: white;
+}
