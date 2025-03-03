@@ -1,30 +1,120 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Főoldal</title>
-    <link rel="stylesheet" href="css/stlye.css">
+    <title>Turisztikai Oldal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li><a href="page1.html">Árak</a></li>
-                <li><a href="page2.html">Galéria</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <h1>Fitness terem</h1>
-            <form action="" method="post">
-                <label for="loginName">Felhasználónév:</label>
-                <input type="text" name="userName" id="loginName" placeholder="Felhasználónév" required>
-                <label for="password">Jelszó:</label>
-                <input type="password" name="password" id="password" placeholder="Jelszó">
-                <input type="submit" value="Belépés">
+        <header>
+            <img src="img/beach.jpg" alt="Strand kép">
+        </header>
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#balaton">Balaton</a></li>
+                    <li><a href="#tisza">Tisza-tó</a></li>
+                    <li><a href="#szelidi">Szelidi-tó</a></li>
+                </ul>
+            </nav>
+            <h3>Kérem töltse ki a jelentkezési űrlapot</h3>
+            <form>
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefonszám:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="lake">Melyik tó érdekli?</label>
+                <select id="lake" name="lake">
+                    <option>Balaton</option>
+                    <option>Tisza-tó</option>
+                    <option>Szelidi-tó</option>
+                </select>
+
+                <label>Milyen szállást keres?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hotel" name="accommodation" value="hotel">
+                    <label for="hotel">Szálloda</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="apartment" name="accommodation" value="apartment">
+                    <label for="apartment">Apartmanház</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="camping" name="accommodation" value="camping">
+                    <label for="camping">Kemping</label>
+                </div>
+
+                <label>Milyen ellátás legyen?</label>
+                <div class="radio-group">
+                    <input type="radio" id="full-board" name="meal" value="full" required>
+                    <label for="full-board">Teljes panzió</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="half-board" name="meal" value="half">
+                    <label for="half-board">Félpanzió</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="breakfast" name="meal" value="breakfast">
+                    <label for="breakfast">Csak reggeli</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="no-meal" name="meal" value="none">
+                    <label for="no-meal">Nem kérek ellátást</label>
+                </div>
+
+                <label for="message">Egyéb üzenet:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Mehet</button>
             </form>
-        </div>
+        </aside>
+
+        <section id="balaton" class="section1">
+            <img src="img/balaton.jpg" alt="Balaton">
+            <p><strong>Balaton</strong> A Balaton (latinul Lacus Pelso, németül Plattensee, szlovénul Blatno jezero,
+                szlovákul Blatenské jazero), becenevén a „magyar tenger” Közép-Európa legnagyobb tava. Típusa a Fertő
+                tóhoz hasonlóan sztyeppei tó, ezek Eurázsia legnyugatabbra fekvő ilyen jellegű tavai. 77 km hosszú,
+                szélessége 1,5-12,8 km között ingadozik, átlagosan 7,8 km, felülete 594 km².
+
+                Keleti medencéjét a Tihanyi-félsziget választja el a tó többi részétől. Déli partjánál medre sekélyebb.
+                Északi oldalán található a badacsonyi borvidék és a Tapolcai-medence, jellegzetes vulkáni tanúhegyeivel.
+                A tó egyes részein halászat folyik. Siófok és Sármellék mellett repülőterek vannak. A Balaton és
+                környéke Budapest mellett az ország turisztikailag leglátogatottabb területe. Környékén gyógyfürdők,
+                termálforrások találhatók. A tavon minden évben megrendezik a Kékszalag Nemzetközi Vitorlás Versenyt.
+            </p>
+        </section>
+        <section id="tisza" class="section2">
+            <img src="img/tisza-to.jpg" alt="Tisza-tó">
+            <p><strong>Tisza-tó</strong> A Tisza-tó (1988-ig Kiskörei víztározó) Magyarország második legnagyobb
+                tava és legnagyobb mesterséges tava a Tiszán, az Alföld északi részén. Létrehozásának legfontosabb
+                okai a Kiskörei Vízerőmű működéséhez szükséges egyenletes vízhozam biztosítása volt, valamint az
+                ugyanebben az időszakban, Tiszaújvárosban épült Tiszai Hőerőmű hűtővíz igényéhez szükséges magas
+                vízszint biztosítása duzzasztással.</p>
+        </section>
+        <section id="szelidi" class="section3">
+            <img src="img/szelidi.jpg" alt="Szelidi-tó">
+            <p><strong>Szelidi-tó</strong> A Szelidi-tó 5 kilométer hosszú, 150–200 méter széles, 3–4 méter mély,
+                vízfelülete megközelítőleg 80 hektár, ezzel hazánk ötödik legnagyobb természetes tava. Bács-Kiskun
+                vármegye Kalocsai járásában, Dunapataj nagyközség külterületén található, mintegy 3 kilométerre Újtelek
+                községtől északra, a Dunapatajt Szakmáron át Kalocsa keleti részeivel összekötő 5308-as útról letérve
+                közelíthető meg. A tó déli partján, nyugalomba jutott futóhomok területein kellemes strandok kerültek
+                kialakításra.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Turisztikai Weboldal</p>
+        </footer>
     </div>
 </body>
+
 </html>

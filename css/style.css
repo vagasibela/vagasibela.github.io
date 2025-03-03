@@ -1,0 +1,128 @@
+body {
+    background-color: #D7B520;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 80%;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar section1"
+        "sidebar section2"
+        "sidebar section3"
+        "footer footer";
+    grid-template-columns: 30% 70%;
+    gap: 15px;
+}
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+header img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background: #5A9BD5;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+.section1, .section2, .section3 {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+}
+.section1 { grid-area: section1; background: #F4C7C3; }
+.section2 { grid-area: section2; background: #FFF2CC; }
+.section3 { grid-area: section3; background: #D9EAD3; }
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px;
+    background: #ddd;
+    border-radius: 10px;
+}
+section img {
+    width: 40%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    float: left;
+    margin-right: 15px;
+}
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+form label {
+    display: block;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.checkbox-group, .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: #5A9BD5;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar, section, footer {
+        width: 100%;
+    }
+    .sidebar nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+}
